@@ -1,0 +1,28 @@
+[project]
+name = "vad-demo"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "lxl",email = "2478194270@qq.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",                         # 不指定版本
+    "requests>=2.31",                 # 最低版本
+    "soundfile>=0.12,<1.0",
+    "scipy (>=1.14,<1.16)",
+    "pandas"
+]
+
+[tool.poetry]
+packages = [{include = "vad_demo", from = "src"}]
+
+[[tool.poetry.source]]
+name = "tuna"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
